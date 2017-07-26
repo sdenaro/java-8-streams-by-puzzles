@@ -14,11 +14,11 @@ public class TranslateSearch {
 	}
 
 	private static boolean isZeroInList(List<BigDecimal> list) {
-		for (BigDecimal decimal : list) {
-			if (decimal.equals(BigDecimal.ZERO))
-				return true;
-		}
-		return false;
+		//for (BigDecimal decimal : list) {
+		//	if (decimal.equals(BigDecimal.ZERO))
+		//		return true;
+		//}
+		return list.stream().anyMatch(d -> (d.equals(BigDecimal.ZERO)));
 	}
 
 }
